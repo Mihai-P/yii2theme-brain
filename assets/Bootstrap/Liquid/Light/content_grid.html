@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It's Brain - premium responsive admin template by Eugene Kopyov</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/brain-theme.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+<script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+<script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+<script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/prettify.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/collapsible.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="hidden-lg pull-right">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-right">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+                        <span class="sr-only">Toggle sidebar</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+                <ul class="nav navbar-nav navbar-left-custom">
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://placehold.it/500" alt="">
+                            <span>Eugene Kopyov</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-tasks"></i> Tasks</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa fa-mail-forward"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-icon sidebar-toggle"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right collapse" id="navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-rotate-right"></i>
+                        <span>Updates</span>
+                        <strong class="label label-danger">15</strong>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-comments"></i>
+                        <span>Messages</span>
+                        <strong class="label label-danger">7</strong>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /navbar -->
+
+
+    <!-- Page header -->
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="logo"><a href="index.html" title=""><img src="images/logo.png" alt=""></a></div>
+            <ul class="middle-nav">
+                <li><a href="#" class="btn btn-default"><i class="fa fa-comments-o"></i> <span>Support tickets</span></a><div class="label label-info">9</div></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-bars"></i> <span>Statistics</span></a></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-male"></i> <span>User list</span></a></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-money"></i> <span>Billing panel</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Page container -->
+    <div class="page-container container-fluid">
+    	
+    	<!-- Sidebar -->
+        <div class="sidebar collapse">
+        	<ul class="navigation">
+            	<li><a href="index.html"><i class="fa fa-laptop"></i> Dashboard</a></li>
+                <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Graphs and charts</a></li>
+                <li>
+                    <a href="#" class="expand"><i class="fa fa-align-justify"></i> Form components</a>
+                    <ul>
+                        <li><a href="form_components.html">Form components</a></li>
+                        <li><a href="form_validation.html">Form validation</a></li>
+                        <li><a href="wysiwyg.html">WYSIWYG editor</a></li>
+                        <li><a href="form_layouts.html">Form layouts</a></li>
+                        <li><a href="form_grid.html">Inputs grid</a></li>
+                        <li><a href="file_uploader.html">Multiple file uploader</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#" class="expand" id="second-level"><i class="fa fa-tasks"></i> Interface components</a>
+                    <ul>
+                        <li><a href="visuals.html">Visuals &amp; notifications</a></li>
+                        <li><a href="navs.html">Navs &amp; navbars</a></li>
+                        <li><a href="panel_options.html">Panels</a></li>
+                        <li><a href="icons.html">Icons <span class="label label-danger">190</span></a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li class="active"><a href="content_grid.html">Content grid</a></li>
+                    </ul>
+                </li>
+                <li><a href="typography.html"><i class="fa fa-text-height"></i> Typography</a></li>
+                <li><a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a></li>
+                <li>
+                    <a href="#" class="expand"><i class="fa fa-table"></i> Tables</a>
+                    <ul>
+                        <li><a href="tables_static.html">Static tables</a></li>
+                        <li><a href="tables_data.html">Data tables</a></li>
+                        <li><a href="tables_custom.html">Custom tables</a></li>
+                        <li><a href="tables_data_advanced.html">Advanced data tables</a></li>
+                    </ul>
+                </li>
+                <li><a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a href="#" class="expand"><i class="fa fa-warning"></i> Error pages <span class="label label-warning">6</span></a>
+                	<ul>
+                        <li><a href="403.html">403 page</a></li>
+                        <li><a href="404.html">404 page</a></li>
+                        <li><a href="405.html">405 page</a></li>
+                        <li><a href="500.html">500 page</a></li>
+                        <li><a href="503.html">503 page</a></li>
+                        <li><a href="offline.html">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="expand"><i class="fa fa-copy"></i> Blank pages <span class="label label-warning">6</span></a>
+                    <ul>
+                        <li><a href="blank_fixed_navbar.html">Fixed navbar</a></li>
+                        <li><a href="blank_static_navbar.html">Static navbar</a></li>
+                        <li><a href="blank_collapsed_sidebar.html">Collapsed sidebar</a></li>
+                        <li><a href="blank_full_width.html">Full width page</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /sidebar -->
+
+    
+        <!-- Page content -->
+        <div class="page-content">
+
+
+            <!-- Page title -->
+        	<div class="page-title">
+                <h5><i class="fa fa-th"></i> Content grid <small>Responsive Bootstrap content grid</small></h5>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-link btn-lg btn-icon dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i><span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">One more line</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /page title -->
+
+            
+            <!-- Statistics -->
+            <ul class="row stats">
+                <li class="col-xs-3"><a href="#" class="btn btn-default">52</a> <span>new pending tasks</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-default">520</a> <span>pending orders</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-default">14</a> <span>new opened tickets</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-default">48</a> <span>new user registrations</span></li>
+            </ul>
+            <!-- /statistics -->
+
+
+            <!-- Content grid -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title">Content grid</h6></div>
+                <div class="panel-body">
+                    <div class="widget">
+                        <h4>Bootstrap content grid options</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>
+                                            Extra small devices
+                                            <small>Phones (&lt;768px)</small>
+                                        </th>
+                                        <th>
+                                            Small devices
+                                            <small>Tablets (≥768px)</small>
+                                        </th>
+                                        <th>
+                                            Medium devices
+                                            <small>Desktops (≥992px)</small>
+                                        </th>
+                                        <th>
+                                            Large devices
+                                            <small>Desktops (≥1200px)</small>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Grid behavior</th>
+                                        <td>Horizontal at all times</td>
+                                        <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Max container width</th>
+                                        <td>None (auto)</td>
+                                        <td>750px</td>
+                                        <td>970px</td>
+                                        <td>1170px</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Class prefix</th>
+                                        <td><code>.col-xs-</code></td>
+                                        <td><code>.col-sm-</code></td>
+                                        <td><code>.col-md-</code></td>
+                                        <td><code>.col-lg-</code></td>
+                                    </tr>
+                                    <tr>
+                                        <th># of columns</th>
+                                        <td colspan="4">12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Max column width</th>
+                                        <td class="text-muted">Auto</td>
+                                        <td>60px</td>
+                                        <td>78px</td>
+                                        <td>95px</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gutter width</th>
+                                        <td colspan="4">30px (15px on each side of a column)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nestable</th>
+                                        <td colspan="4">Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Offsets</th>
+                                        <td colspan="1" class="text-muted">N/A</td>
+                                        <td colspan="3">Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Column ordering</th>
+                                        <td class="text-muted">N/A</td>
+                                        <td colspan="3">Yes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Introduction</h4>
+                        <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+                        <ul>
+                            <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding</li>
+                            <li>Use rows to create horizontal groups of columns.</li>
+                            <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+                            <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. LESS mixins can also be used for more semantic layouts.</li>
+                            <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+                            <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
+                        </ul>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-1"><div>.col-md-1</div></div>
+                            <div class="col-md-11"><div>.col-md-11</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-2"><div>.col-md-2</div></div>
+                            <div class="col-md-10"><div>.col-md-10</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-3"><div>.col-md-3</div></div>
+                            <div class="col-md-9"><div>.col-md-9</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-4"><div>.col-md-4</div></div>
+                            <div class="col-md-8"><div>.col-md-8</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-5"><div>.col-md-5</div></div>
+                            <div class="col-md-7"><div>.col-md-7</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-6"><div>.col-md-6</div></div>
+                            <div class="col-md-6"><div>.col-md-6</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-7"><div>.col-md-7</div></div>
+                            <div class="col-md-5"><div>.col-md-5</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-8"><div>.col-md-8</div></div>
+                            <div class="col-md-4"><div>.col-md-4</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-9"><div>.col-md-9</div></div>
+                            <div class="col-md-3"><div>.col-md-3</div></div>
+                        </div>
+
+                        <div class="row demo-grid widget-inner">
+                            <div class="col-md-10"><div>.col-md-10</div></div>
+                            <div class="col-md-2"><div>.col-md-2</div></div>
+                        </div>
+
+                        <div class="row demo-grid">
+                            <div class="col-md-11"><div>.col-md-11</div></div>
+                            <div class="col-md-1"><div>.col-md-1</div></div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Stacked-to-horizontal</h4>
+                        <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p>
+
+                        <div class="widget">
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                                <div class="col-md-1"><div>.col-md-1</div></div>
+                            </div>
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-md-8"><div>.col-md-8</div></div>
+                                <div class="col-md-4"><div>.col-md-4</div></div>
+                            </div>
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-md-4"><div>.col-md-4</div></div>
+                                <div class="col-md-4"><div>.col-md-4</div></div>
+                                <div class="col-md-4"><div>.col-md-4</div></div>
+                            </div>
+                            <div class="row demo-grid">
+                                <div class="col-md-6"><div>.col-md-6</div></div>
+                                <div class="col-md-6"><div>.col-md-6</div></div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;div class="row">
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+          &lt;div class="col-md-1">.col-md-1&lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="col-md-8">.col-md-8&lt;/div>
+          &lt;div class="col-md-4">.col-md-4&lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="col-md-4">.col-md-4&lt;/div>
+          &lt;div class="col-md-4">.col-md-4&lt;/div>
+          &lt;div class="col-md-4">.col-md-4&lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="col-md-6">.col-md-6&lt;/div>
+          &lt;div class="col-md-6">.col-md-6&lt;/div>
+        &lt;/div></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Mobile and desktop</h4>
+                        <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+
+                        <div class="widget">
+                            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-xs-12 col-md-8"><div>.col-xs-12 .col-md-8</div></div>
+                                <div class="col-xs-6 col-md-4"><div>.col-xs-6 .col-md-4</div></div>
+                            </div>
+
+                            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-xs-6 col-md-4"><div>.col-xs-6 .col-md-4</div></div>
+                                <div class="col-xs-6 col-md-4"><div>.col-xs-6 .col-md-4</div></div>
+                                <div class="col-xs-6 col-md-4"><div>.col-xs-6 .col-md-4</div></div>
+                            </div>
+
+                            <!-- Columns are always 50% wide, on mobile and desktop -->
+                            <div class="row demo-grid">
+                                <div class="col-xs-6"><div>.col-xs-6</div></div>
+                                <div class="col-xs-6"><div>.col-xs-6</div></div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        &lt;div class="row">
+          &lt;div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8&lt;/div>
+          &lt;div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4&lt;/div>
+        &lt;/div>
+
+        &lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        &lt;div class="row">
+          &lt;div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4&lt;/div>
+          &lt;div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4&lt;/div>
+          &lt;div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4&lt;/div>
+        &lt;/div>
+
+        &lt;!-- Columns are always 50% wide, on mobile and desktop -->
+        &lt;div class="row">
+          &lt;div class="col-xs-6">.col-xs-6&lt;/div>
+          &lt;div class="col-xs-6">.col-xs-6&lt;/div>
+        &lt;/div></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h5>Mobile, tablet, desktops</h5>
+                        <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+
+                        <div class="widget">
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-xs-12 col-sm-6 col-md-8"><div>.col-xs-12 .col-sm-6 .col-md-8</div></div>
+                                <div class="col-xs-6 col-md-4"><div>.col-xs-6 .col-md-4</div></div>
+                            </div>
+
+                            <div class="row demo-grid">
+                                <div class="col-xs-6 col-sm-4"><div>.col-xs-6 .col-sm-4</div></div>
+                                <div class="col-xs-6 col-sm-4"><div>.col-xs-6 .col-sm-4</div></div>
+
+                                <div class="clearfix visible-xs"></div>
+                                <div class="col-xs-6 col-sm-4"><div>.col-xs-6 .col-sm-4</div></div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;div class="row">
+          &lt;div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8&lt;/div>
+          &lt;div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+          &lt;div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4&lt;/div>
+          &lt;div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4&lt;/div>
+          &lt;!-- Optional: clear the XS cols if their content doesn't match in height -->
+          &lt;div class="clearfix visible-xs">&lt;/div>
+          &lt;div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4&lt;/div>
+        &lt;/div></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Offseting columns</h4>
+                        <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
+
+                        <div class="widget">
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-md-4"><div>.col-md-4</div></div>
+                                <div class="col-md-4 col-md-offset-4"><div>.col-md-4 .col-md-offset-4</div></div>
+                            </div>
+                            <div class="row demo-grid widget-inner">
+                                <div class="col-md-3 col-md-offset-3"><div>.col-md-3 .col-md-offset-3</div></div>
+                                <div class="col-md-3 col-md-offset-3"><div>.col-md-3 .col-md-offset-3</div></div>
+                            </div>
+                            <div class="row demo-grid">
+                                <div class="col-md-6 col-md-offset-3"><div>.col-md-6 .col-md-offset-3</div></div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;div class="row">
+          &lt;div class="col-md-4">.col-md-4&lt;/div>
+          &lt;div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+          &lt;div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3&lt;/div>
+          &lt;div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3&lt;/div>
+        &lt;/div>
+        &lt;div class="row">
+          &lt;div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3&lt;/div>
+        &lt;/div></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Nesting columns</h4>
+                        <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-md-*</code> columns within an existing <code>.col-md-*</code> column. Nested rows should include a set of columns that add up to 12.</p>
+
+                        <div class="widget">
+                            <div class="row demo-grid">
+                                <div class="col-md-8">
+                                    <div class="widget-inner">Level 1: .col-md-8</div>
+                                    <div class="row demo-grid container-fluid">
+                                        <div class="col-md-6">
+                                            <div>Level 2: .col-md-6</div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div>Level 2: .col-md-6</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="widget-inner">Level 1: .col-md-4</div>
+                                    <div class="row demo-grid container-fluid">
+                                        <div class="col-md-4">
+                                            <div>Level 2: .col-md-4</div>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <div>Level 2: .col-md-8</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;div class="row">
+          &lt;div class="col-md-9">
+            Level 1: .col-md-9
+            &lt;div class="row">
+              &lt;div class="col-md-6">
+                Level 2: .col-md-6
+              &lt;/div>
+              &lt;div class="col-md-6">
+                Level 2: .col-md-6
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div></pre>
+                    </div>
+
+                    <hr>
+
+                    <div class="widget">
+                        <h4>Column ordering</h4>
+                        <p>Easily change the order of our built-in grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> modifier classes.</p>
+
+                        <div class="widget">
+                            <div class="row demo-grid">
+                                <div class="col-md-9 col-md-push-3"><div>.col-md-9 .col-md-push-3</div></div>
+                                <div class="col-md-3 col-md-pull-9"><div>.col-md-3 .col-md-pull-9</div></div>
+                            </div>
+                        </div>
+
+                        <span class="subtitle">Example code:</span>
+                        <pre class="prettyprint linenums">
+        &lt;div class="row demo-grid">
+          &lt;div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3&lt;/div>
+          &lt;div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9&lt;/div>
+        &lt;/div></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- /content grid -->
+
+
+            <!-- Footer -->
+            <div class="footer">
+                &copy; Copyright 2011. All rights reserved. It's Brain admin theme by <a href="#" title="">Eugene Kopyov</a>
+            </div>
+            <!-- /footer -->
+
+        
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- page container -->
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.page-container {
+	margin-top: 30px;
+}
+
+.breadcrumb {
+	padding: 12px 15px 0;
+	list-style: none;
+	background-color: transparent;
+	margin-bottom: 0;
+}
+.panel .panel-heading .pagination select.input-sm {
+	font-size: 12px;
+	border-radius: 0;
+	padding: 5px 9px 7px 9px;
+	margin-top: 5px;
+}
+
+.table-responsive .summary {
+	display: none;
+}
+
+/* SEARCH FORM */
+.form-search {
+	border-bottom: 1px solid #ddd;
+	padding: 3px;
+}
+
+.panel .form-inline .form-group:first-child {
+	margin-top: 0;
+}
+.panel .form-inline .form-group .col-sm-2 {
+	padding-top: 6px;
+}
+
+.form-inline .advance-search .form-group {
+	display: block;
+}
+/* REQUIRED FIELDS */
+div.required label:after {
+    content: " *";
+    color: red;
+}

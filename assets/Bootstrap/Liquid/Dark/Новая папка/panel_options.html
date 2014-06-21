@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It's Brain - premium responsive admin template by Eugene Kopyov</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/brain-theme.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/select2.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputmask.js"></script>
+<script type="text/javascript" src="js/plugins/forms/autosize.js"></script>
+<script type="text/javascript" src="js/plugins/forms/inputlimit.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/listbox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/multiselect.js"></script>
+<script type="text/javascript" src="js/plugins/forms/validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/tags.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.full.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/wysihtml5.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/wysihtml5/toolbar.js"></script>
+
+<script type="text/javascript" src="js/plugins/interface/jgrowl.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/datatables.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/prettify.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fancybox.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/interface/timepicker.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/fullcalendar.min.js"></script>
+<script type="text/javascript" src="js/plugins/interface/collapsible.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="hidden-lg pull-right">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-right">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+                        <span class="sr-only">Toggle sidebar</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+                <ul class="nav navbar-nav navbar-left-custom">
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/demo/users/face6.png" alt="">
+                            <span>Eugene Kopyov</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-tasks"></i> Tasks</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa fa-mail-forward"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-icon sidebar-toggle"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right collapse" id="navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-rotate-right"></i>
+                        <span>Updates</span>
+                        <strong class="label label-danger">15</strong>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-comments"></i>
+                        <span>Messages</span>
+                        <strong class="label label-danger">7</strong>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span>Notifications</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /navbar -->
+
+
+    <!-- Page header -->
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="logo"><a href="index.html" title=""><img src="images/logo.png" alt=""></a></div>
+            <ul class="middle-nav">
+                <li><a href="#" class="btn btn-default"><i class="fa fa-comments-o"></i> <span>Support tickets</span></a><div class="label label-info">9</div></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-bars"></i> <span>Statistics</span></a></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-male"></i> <span>User list</span></a></li>
+                <li><a href="#" class="btn btn-default"><i class="fa fa-money"></i> <span>Billing panel</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Page container -->
+    <div class="page-container container-fluid">
+    	
+    	<!-- Sidebar -->
+        <div class="sidebar collapse">
+        	<ul class="navigation">
+            	<li><a href="index.html"><i class="fa fa-laptop"></i> Dashboard</a></li>
+                <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Graphs and charts</a></li>
+                <li>
+                    <a href="#" class="expand"><i class="fa fa-align-justify"></i> Form components</a>
+                    <ul>
+                        <li><a href="form_components.html">Form components</a></li>
+                        <li><a href="form_validation.html">Form validation</a></li>
+                        <li><a href="wysiwyg.html">WYSIWYG editor</a></li>
+                        <li><a href="form_layouts.html">Form layouts</a></li>
+                        <li><a href="form_grid.html">Inputs grid</a></li>
+                        <li><a href="file_uploader.html">Multiple file uploader</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#" class="expand" id="second-level"><i class="fa fa-tasks"></i> Interface components</a>
+                    <ul>
+                        <li><a href="visuals.html">Visuals &amp; notifications</a></li>
+                        <li><a href="navs.html">Navs &amp; navbars</a></li>
+                        <li class="active"><a href="panel_options.html">Panels</a></li>
+                        <li><a href="icons.html">Icons <span class="label label-danger">190</span></a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="content_grid.html">Content grid</a></li>
+                    </ul>
+                </li>
+                <li><a href="typography.html"><i class="fa fa-text-height"></i> Typography</a></li>
+                <li><a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a></li>
+                <li>
+                    <a href="#" class="expand"><i class="fa fa-table"></i> Tables</a>
+                    <ul>
+                        <li><a href="tables_static.html">Static tables</a></li>
+                        <li><a href="tables_data.html">Data tables</a></li>
+                        <li><a href="tables_custom.html">Custom tables</a></li>
+                        <li><a href="tables_data_advanced.html">Advanced data tables</a></li>
+                    </ul>
+                </li>
+                <li><a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a href="#" class="expand"><i class="fa fa-warning"></i> Error pages <span class="label label-warning">6</span></a>
+                	<ul>
+                        <li><a href="403.html">403 page</a></li>
+                        <li><a href="404.html">404 page</a></li>
+                        <li><a href="405.html">405 page</a></li>
+                        <li><a href="500.html">500 page</a></li>
+                        <li><a href="503.html">503 page</a></li>
+                        <li><a href="offline.html">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="expand"><i class="fa fa-copy"></i> Blank pages <span class="label label-warning">6</span></a>
+                    <ul>
+                        <li><a href="blank_fixed_navbar.html">Fixed navbar</a></li>
+                        <li><a href="blank_static_navbar.html">Static navbar</a></li>
+                        <li><a href="blank_collapsed_sidebar.html">Collapsed sidebar</a></li>
+                        <li><a href="blank_full_width.html">Full width page</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /sidebar -->
+
+    
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Page title -->
+        	<div class="page-title">
+                <h5><i class="fa fa-columns"></i> Panel options <small>Colors, buttons, labels, dropdowns etc.</small></h5>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-link btn-lg btn-icon dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i><span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">One more line</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /page title -->
+
+            
+            <!-- Statistics -->
+            <ul class="row stats">
+                <li class="col-xs-3"><a href="#" class="btn btn-success">52</a> <span>new pending tasks</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-info">520</a> <span>pending orders</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-danger">14</a> <span>new opened tickets</span></li>
+                <li class="col-xs-3"><a href="#" class="btn btn-default">48</a> <span>new user registrations</span></li>
+            </ul>
+            <!-- /statistics -->
+
+
+            <!-- Panel heading options --> 
+            <div class="row">
+                <div class="col-md-6">
+
+                    <!-- Default panel --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h6 class="panel-title">Default panel</h6></div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /default panel --> 
+
+
+                    <!-- Panel with left spinner --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"><span class="loading-spinner pull-left"></span> Panel with left spinner</h6>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with left spinner --> 
+
+
+                    <!-- Panel with button --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel heading with button</h6>
+                            <a href="#" class="pull-right btn btn-xs btn-primary">Button</a>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with button --> 
+
+
+                    <!-- Panel with label --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with label</h6>
+                            <span class="pull-right label label-danger">Label</span>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with label --> 
+
+
+                    <!-- Panel with right icon dropdown -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with right icon dropdown</h6>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle btn btn-link btn-icon" data-toggle="dropdown">
+                                    <i class="fa fa-cogs"></i>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">One more line</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with right icon dropdown -->
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <!-- Panel with icon --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title"><i class="fa fa-cogs"></i> Panel with icon</h6>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with icon --> 
+
+
+                    <!-- Panel with right spinner --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with right spinner</h6>
+                            <div class="pull-right">
+                                <span class="loading-spinner pull-right"></span>
+                            </div>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with right spinner --> 
+
+
+                    <!-- Panel with button group --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with button group</h6>
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-sm btn-danger btn-icon"><i class="fa fa-cogs"></i></button>
+                                <button class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret caret-split"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">One more line</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with button group --> 
+
+
+                    <!-- Panel with badge --> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with badge</h6>
+                            <span class="pull-right badge">893</span>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with badge --> 
+
+
+                    <!-- Panel with icon group -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Panel with icon group</h6>
+                            <div class="panel-icons-group">
+                                <a href="#" class="btn btn-link btn-icon"><i class="fa fa-inbox"></i></a>
+                                <a href="#" class="btn btn-link btn-icon"><i class="fa fa-tasks"></i></a>
+                                <a href="#" class="btn btn-link btn-icon"><i class="fa fa-cogs"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body"><code>div class="panel-heading"</code></div>
+                    </div>
+                    <!-- /panel with icon group -->
+
+                </div>
+            </div>
+            <!-- /panel heading options --> 
+
+
+            <h4 class="heading-underline">Panel styles</h4>
+
+
+            <!-- Panel styles --> 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Default panel</h6>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-default"</code>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Danger panel</h6>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-danger"</code>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Info panel</h6>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-info"</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Primary panel</h6>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle btn btn-link btn-icon" data-toggle="dropdown">
+                                    <i class="fa fa-cogs"></i> 
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">One more line</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-primary"</code>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Success panel</h6>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-success"</code>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Warning panel</h6>
+                        </div>
+                        <div class="panel-body">
+                            <code>div class="panel panel-warning"</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /panel styles --> 
+
+
+            <!-- Nested panels --> 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Nesting panels</h6>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title">Default panel</h6>
+                                </div>
+                                <div class="panel-body">
+                                    <code>div class="panel panel-default"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">Nesting panels</h6>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h6 class="panel-title">Success panel</h6>
+                                </div>
+                                <div class="panel-body">
+                                    <code>div class="panel panel-success"</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /nested panels --> 
+
+
+            <!-- Panel with table -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title">With table</h6></div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /panel with table -->
+
+
+            <!-- Panel with table and panel body -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title">With table &amp; panel body</h6></div>
+                <div class="panel-body">
+                    Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /panel with table and panel body -->
+
+
+            <!-- Panel with list group -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title">With list group</h6></div>
+                <div class="panel-body">
+                    Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </div>
+
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <!-- /panel with list group -->
+
+
+            <!-- Panel with linked items -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title">With linked items</h6></div>
+                <div class="panel-body">
+                    Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </div>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Cras justo odio</a>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+            </div>
+            <!-- /panel with linked items -->
+
+                
+
+            <!-- Footer -->
+            <div class="footer">
+                &copy; Copyright 2011. All rights reserved. It's Brain admin theme by <a href="#" title="">Eugene Kopyov</a>
+            </div>
+            <!-- /footer -->
+
+        
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- page container -->
+
+</body>
+</html>
