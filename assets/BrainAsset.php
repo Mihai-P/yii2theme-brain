@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class BrainAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/tooezweb/core/assets/Bootstrap/Liquid/Light/';
+    public $sourcePath = '@vendor/tooezweb/core/assets/Brain/Liquid/Light/';
     public $css = [
         'css/brain-theme.css',
         'css/styles.css',
