@@ -1,11 +1,11 @@
 <?php
 
-namespace core;
+namespace theme;
 
 
 class Module extends \yii\base\Module
 {
-	public $controllerNamespace = 'core\controllers';
+	public $controllerNamespace = 'theme\controllers';
 
     /**
      * @var int
@@ -40,12 +40,12 @@ class Module extends \yii\base\Module
 	{
 		parent::init();
 
-		\Yii::$app->getI18n()->translations['core.*'] = [
+		\Yii::$app->getI18n()->translations['theme.*'] = [
 			'class' => 'yii\i18n\PhpMessageSource',
 			'basePath' => __DIR__.'/messages',
 		];
 		$this->setAliases([
-			'@core' => __DIR__
+			'@theme' => __DIR__
 		]);	}
 
 }

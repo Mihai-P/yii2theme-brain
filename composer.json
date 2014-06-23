@@ -1,7 +1,7 @@
 {
-	"name": "tooezweb/core",
-	"description": "Yii 2 Theme and Small CMS Module",
-	"keywords": ["yii", "yii2", "cms", "theme"],
+	"name": "tez/brain",
+	"description": "Yii 2 Theme",
+	"keywords": ["yii", "yii2", "theme"],
 	"type": "yii2-theme",
 	"license": "BSD-3-Clause",
 	"support": {
