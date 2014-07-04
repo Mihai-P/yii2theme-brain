@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace core\widgets;
+namespace theme\widgets;
 
 use Yii;
 use Closure;
@@ -47,13 +47,56 @@ class GridView extends \yii\grid\GridView
      */
     public $layout = "\n{items}\n                
                 <div class=\"table-footer\">\n
-                    <div class=\"table-actions\">\n
-                        <label class=\"pull-left\">Apply action:</label>\n
-                        <a class=\"pull-left btn btn-xs btn-danger\" href=\"/page/create\">Delete All</a>
-                        <a class=\"pull-left btn btn-xs btn-success\" href=\"/page/create\">Activate All</a>
-                        <a class=\"pull-left btn btn-xs btn-primary\" href=\"/page/create\">Deactivate All</a>
-                    </div>\n
+                    {actions}\n
                     {pager}\n
                 </div>";
+
+    /**
+     * @var array the all buttons for the list
+     */
+    public $buttons;
+
+    /**
+     * Renders a section of the specified name.
+     * If the named section is not supported, false will be returned.
+     * @param string $name the section name, e.g., `{summary}`, `{items}`.
+     * @return string|boolean the rendering result of the section, or false if the named section is not supported.
+     */
+    public function renderSection($name)
+    {
+        switch ($name) {
+            case '{summary}':
+                return $this->renderSummary();
+            case '{items}':
+                return $this->renderItems();
+            case '{pager}':
+                return $this->renderPager();
+            case '{sorter}':
+                return $this->renderSorter();
+            case '{actions}':
+                return $this->renderActions();
+            default:
+                return false;
+        }
+    }            
+
+    /**
+     * Renders the actions for the selected rows.
+     * @return string the rendering result
+     */
+    public function renderActions()
+    {
+        $str = '';
+        if(count($this->buttons)) {
+            foreach($this->buttons as $button) {
+                $str .= Html::a($button['text'], $button['url'], $button['options']);
+            }
+        }
+        if($str)
+            return "<div class=\"table-actions\">\n
+                        <label class=\"pull-left\">Apply action:</label>\n
+                        {$str}
+                    </div>\n";
+    }
 }
 

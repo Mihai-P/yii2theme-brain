@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace core\widgets;
+namespace theme\widgets;
 
 /**
  * ActiveForm ...
@@ -40,4 +40,9 @@ class ActiveForm extends \yii\widgets\ActiveForm
      * @var boolean whether to perform validation when the form is submitted.
      */
     public $validateOnSubmit = true;    
+
+    /**
+     * @var boolean whether to perform validation when the form is submitted.
+     */
+    public $validateOnChange = false;
 }

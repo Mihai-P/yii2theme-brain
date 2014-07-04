@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace core\widgets;
+namespace theme\widgets;
 
 use Yii;
 use Closure;
@@ -44,55 +44,73 @@ class ActionColumn extends \yii\grid\ActionColumn
     public $template = '{update} {status} {delete}';
 
     /**
+     * Get the proper access privileges name from the current controller
+     * @return string
+    */
+    protected function getCompatibilityId() {
+        $controller = $this->controller ? $this->controller : Yii::$app->controller->id;
+        if(strpos($controller, "/")) {
+            $controller = substr($controller, strpos($controller, "/") + 1);
+        }
+        return str_replace(' ', '', ucwords(str_replace('-', ' ', $controller)));
+    }
+
+    /**
      * Initializes the default button rendering callbacks
      */
     protected function initDefaultButtons()
     {
-        if (!isset($this->buttons['view'])) {
-            $this->buttons['view'] = function ($url, $model) {
-                return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
-                    'title' => Yii::t('yii', 'View'),
-                    'data-pjax' => '0',
-                ]);
-            };
-        }
-        if (!isset($this->buttons['status'])) {
-            $this->buttons['status'] = function ($url, $model) {
-                if($model->status == 'active') 
-                    return Html::a('<span class="glyphicon glyphicon-ok"></span>', $url, [
-                        'title' => Yii::t('yii', 'Deactivate'),
-                        'data-confirm' => Yii::t('yii', 'Are you sure you want to deactivate this item?'),
-                        'class' => 'btn btn-xs btn-success hidden-xs',
-                        'data-pjax' => '1',
+        if(\Yii::$app->user->checkAccess('read::' . $this->getCompatibilityId())) {
+            if (!isset($this->buttons['view'])) {
+                $this->buttons['view'] = function ($url, $model) {
+                    return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
+                        'title' => Yii::t('yii', 'View'),
+                        'data-pjax' => '0',
                     ]);
-                else 
-                    return Html::a('<span class="glyphicon glyphicon-remove"></span>', $url, [
-                        'title' => Yii::t('yii', 'Activate'),
-                        'data-confirm' => Yii::t('yii', 'Are you sure you want to activate this item?'),
-                        'class' => 'btn btn-xs btn-warning hidden-xs',
-                        'data-pjax' => '1',
-                    ]);
-            };
-        }        
-        if (!isset($this->buttons['update'])) {
-            $this->buttons['update'] = function ($url, $model) {
-                return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
-                    'title' => Yii::t('yii', 'Update'),
-                    'class' => 'btn btn-xs btn-default',
-                    'data-pjax' => '0',
-                ]);
-            };
+                };
+            }
         }
-        if (!isset($this->buttons['delete'])) {
-            $this->buttons['delete'] = function ($url, $model) {
-                return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
-                    'title' => Yii::t('yii', 'Delete'),
-                    'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
-                    'data-method' => 'post',
-                    'class' => 'btn btn-xs btn-danger',
-                    'data-pjax' => '0',
-                ]);
-            };
+        if(\Yii::$app->user->checkAccess('update::' . $this->getCompatibilityId())) {
+            if (!isset($this->buttons['status'])) {
+                $this->buttons['status'] = function ($url, $model) {
+                    if($model->status == 'active') 
+                        return Html::a('<span class="glyphicon glyphicon-remove"></span>', $url, [
+                            'title' => Yii::t('yii', 'Deactivate'),
+                            'data-confirm' => Yii::t('yii', 'Are you sure you want to deactivate this item?'),
+                            'class' => 'btn btn-xs btn-warning hidden-xs',
+                            'data-pjax' => '0',
+                        ]);
+                    else 
+                        return Html::a('<span class="glyphicon glyphicon-ok"></span>', $url, [
+                            'title' => Yii::t('yii', 'Activate'),
+                            'data-confirm' => Yii::t('yii', 'Are you sure you want to activate this item?'),
+                            'class' => 'btn btn-xs btn-success hidden-xs',
+                            'data-pjax' => '0',
+                        ]);
+                };
+            }        
+            if (!isset($this->buttons['update'])) {
+                $this->buttons['update'] = function ($url, $model) {
+                    return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
+                        'title' => Yii::t('yii', 'Update'),
+                        'class' => 'btn btn-xs btn-default',
+                        'data-pjax' => '0',
+                    ]);
+                };
+            }
+        }
+        if(\Yii::$app->user->checkAccess('delete::' . $this->getCompatibilityId())) {
+            if (!isset($this->buttons['delete'])) {
+                $this->buttons['delete'] = function ($url, $model) {
+                    return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                        'title' => Yii::t('yii', 'Delete'),
+                        'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+                        'data-method' => 'post',
+                        'class' => 'btn btn-xs btn-danger',
+                        'data-pjax' => '0',
+                    ]);
+                };
+            }
         }
     }
 }

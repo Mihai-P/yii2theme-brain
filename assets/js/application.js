@@ -1,8 +1,91 @@
+/*==========================
+GridView Related operations
+==========================*/
+
+var myGrid = {
+  	submit: function(element) {
+		selected = element.closest('.grid-view').yiiGridView("getSelectedRows");
+		if(selected.length > 0) {
+			jQuery.ajax({
+		        "type": "POST",
+		        "url": element.attr('href'),
+		        "cache": false,
+		        "data":{items: selected}
+		    })
+		    .success(function ( response ) {
+		    	$.pjax.reload({container: "#main-pjax", async:false});
+		        //$.jGrowl("Pagination changed", { life: 2000 });
+		    }); 
+		} else {
+			alert('Select some items first');
+		}
+  	}
+};
+
 $(function() {
 	$('select.pagination').on('change', function() {
 		document.location.href = $(this).attr('data-change') + '?records=' + $(this).val();
 	});
 });
+
+/*==========================
+JQUERY extension
+Reset all the inputs in a container to it's default attributes
+==========================*/
+(function($) {
+    $.fn.resetToDefault = function() {
+        $(this).trigger( "reset" );
+        $(this).find(':input').each(function() {
+            switch(this.type) {
+                case 'hidden':
+                case 'password':
+                case 'text':
+                case 'textarea':
+                    if($(this).attr('data-default')) {
+                        $(this).val($(this).attr('data-default'));
+                    } else {
+                        $(this).val('');
+                    }
+                    break;
+                case 'select-multiple':
+                case 'select':
+                case 'select-one':
+                    if($(this).attr('data-default')) {
+                        $(this).val($(this).attr('data-default'));
+                    } else {
+                        $(this).val('');
+                    }
+                    $(this).select2("val", $(this).val());
+                    break;
+                case 'checkbox':
+                case 'radio':
+                    this.checked = false;
+            }
+        });
+        $(this).find(':submit').each(function() {
+            if($(this).attr('data-default')) {
+                $(this).val($(this).attr('data-default'));
+            }
+        });           
+    };
+})(jQuery);
+
+/*==========================
+RESET THE SEARCH FORM
+==========================*/
+$(document).on('click', '.reset-search', function(e) {
+    $(this).closest("form").resetToDefault();
+    $(this).closest("form").submit();
+});
+
+/*==========================
+SUBMIT THE SEARCH FORM
+==========================*/
+$(document).on('change', '.form-search select:not(.form-search .advanced-search select)', function(e) {
+    $(this).closest("form").submit();
+});
+
+
 
 
 /* ========================================================
@@ -312,7 +395,7 @@ $(function() {
 
 	//===== Default select =====//
 	// Fix input element click problem
-  	$('.advance-search input, .advance-search label, .advance-search select').click(function(e) {
+  	$('.advanced-search input, .advanced-search label, .advanced-search select').click(function(e) {
     	e.stopPropagation();
   	});
 

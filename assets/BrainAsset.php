@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace core\assets;
+namespace theme\assets;
 
 use yii\web\AssetBundle;
 
@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class BrainAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/tooezweb/core/assets/Brain/Liquid/Light/';
+    public $sourcePath = '@vendor/tez/theme/assets/Brain/Liquid/Light/';
     public $css = [
         'css/brain-theme.css',
         'css/styles.css',

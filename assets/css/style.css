@@ -40,3 +40,17 @@ div.required label:after {
     content: " *";
     color: red;
 }
+
+/* ADVANCED SEARCH */
+.advanced-search .form-group {
+	display: block;
+}
+.form-horizontal.advanced-search .form-control {
+	display: block;
+	width: 100%;
+}
+
+/* GRID FOOTER */
+.table-footer .table-actions .btn {
+	margin-right: 5px;
+}
