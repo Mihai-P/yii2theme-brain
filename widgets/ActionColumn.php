@@ -74,17 +74,17 @@ class ActionColumn extends \yii\grid\ActionColumn
             if (!isset($this->buttons['status'])) {
                 $this->buttons['status'] = function ($url, $model) {
                     if($model->status == 'active') 
-                        return Html::a('<span class="glyphicon glyphicon-remove"></span>', $url, [
+                        return Html::a('<span class="glyphicon glyphicon-remove"></span>', $url,  [
                             'title' => Yii::t('yii', 'Deactivate'),
-                            'data-confirm' => Yii::t('yii', 'Are you sure you want to deactivate this item?'),
-                            'class' => 'btn btn-xs btn-warning hidden-xs',
+                            'onclick' => 'javascript: if(confirm("Are you sure you want to deactivate this item?")) myGrid.status($(this)); return false;',
+                            'class' => 'btn btn-xs btn-warning hidden-xs button-status-deactivate',
                             'data-pjax' => '0',
                         ]);
                     else 
-                        return Html::a('<span class="glyphicon glyphicon-ok"></span>', $url, [
+                        return Html::a('<span class="glyphicon glyphicon-ok"></span>', $url,  [
                             'title' => Yii::t('yii', 'Activate'),
-                            'data-confirm' => Yii::t('yii', 'Are you sure you want to activate this item?'),
-                            'class' => 'btn btn-xs btn-success hidden-xs',
+                            'onclick' => 'javascript: if(confirm("Are you sure you want to activate this item?")) myGrid.status($(this)); return false;',
+                            'class' => 'btn btn-xs btn-success hidden-xs button-status-activate',
                             'data-pjax' => '0',
                         ]);
                 };
@@ -104,9 +104,8 @@ class ActionColumn extends \yii\grid\ActionColumn
                 $this->buttons['delete'] = function ($url, $model) {
                     return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
                         'title' => Yii::t('yii', 'Delete'),
-                        'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
-                        'data-method' => 'post',
-                        'class' => 'btn btn-xs btn-danger',
+                        'onclick' => 'javascript: if(confirm("Are you sure you want to delete this item?")) myGrid.status($(this)); return false;',
+                        'class' => 'btn btn-xs btn-danger button-delete',
                         'data-pjax' => '0',
                     ]);
                 };

@@ -13,19 +13,35 @@ var myGrid = {
 		        "data":{items: selected}
 		    })
 		    .success(function ( response ) {
-		    	$.pjax.reload({container: "#main-pjax", async:false});
-		        //$.jGrowl("Pagination changed", { life: 2000 });
+		    	$.pjax.reload({container: "#main-pjax", fragment: "#main-pjax", async:false});
 		    }); 
 		} else {
 			alert('Select some items first');
 		}
-  	}
+  	},
+  	status: function(element) {
+		jQuery.ajax({
+	        "type": "GET",
+	        "url": element.attr('href'),
+	        "cache": false,
+	    })
+	    .success(function ( response ) {
+	    	$.pjax.reload({container: "#main-pjax", fragment: "#main-pjax", async:false, timeout: 4000});
+	    }); 
+  	},
+  	init: function(element) {
+ 		$('#main-pjax').on('pjax:end',   function() { 
+	    	jQuery('#main-grid').yiiGridView({"filterSelector":"#main-grid-filters input, #main-grid-filters select"});
+	    	jQuery('#main-grid').yiiGridView('setSelectionColumn', {"name":"selection[]","multiple":true,"checkAll":"selection_all"});
+ 		});  		
+  	},
 };
 
 $(function() {
 	$('select.pagination').on('change', function() {
 		document.location.href = $(this).attr('data-change') + '?records=' + $(this).val();
 	});
+	myGrid.init();
 });
 
 /*==========================
