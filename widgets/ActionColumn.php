@@ -65,6 +65,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                 $this->buttons['view'] = function ($url, $model) {
                     return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
                         'title' => Yii::t('yii', 'View'),
+                        'class' => 'btn btn-xs btn-primary hidden-xs button-status-deactivate',
                         'data-pjax' => '0',
                     ]);
                 };

@@ -41,6 +41,10 @@ $(function() {
 	$('select.pagination').on('change', function() {
 		document.location.href = $(this).attr('data-change') + '?records=' + $(this).val();
 	});
+	$(document).on('click', '.ui-datepicker .ui-datepicker-header a, .ui-datepicker .ui-datepicker-header a span', function (e) {
+		alert('Stop');
+        e.stopPropagation();
+    });	
 	myGrid.init();
 });
 

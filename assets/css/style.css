@@ -35,6 +35,21 @@
 .form-inline .advance-search .form-group {
 	display: block;
 }
+
+.form-search .form-group .dropdown-menu .row {
+	margin-bottom: 5px;
+}
+
+.form-search .form-group .dropdown-menu .row {
+	margin-bottom: 5px;
+}
+
+.form-search .form-group .dropdown-menu .row.buttons div {
+	text-align: right;
+}
+
+
+
 /* REQUIRED FIELDS */
 div.required label:after {
     content: " *";
