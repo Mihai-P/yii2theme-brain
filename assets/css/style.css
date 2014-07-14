@@ -89,3 +89,12 @@ div.inline div.checkbox {
 div.inline div.checkbox:first-child label {
 	padding-left: 0;
 }
+/* ERRORS / SUCCESS */
+div.has-error div.select2-container a.select2-choice, div.has-error iframe.wysihtml5-sandbox {
+	border-color: #D65C4F !important;
+}
+
+div.has-success div.select2-container a.select2-choice, div.has-success iframe.wysihtml5-sandbox {
+	border-color: #239169 !important;
+}
+
