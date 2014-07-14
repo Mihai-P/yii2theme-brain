@@ -69,3 +69,23 @@ div.required label:after {
 .table-footer .table-actions .btn {
 	margin-right: 5px;
 }
+
+.checkbox-b div.checkbox {
+	float: left;
+	width: 100px;
+}
+
+div.inline div.checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 400;
+	cursor: pointer;
+	padding-left: 0;
+	padding-top: 7px;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+div.inline div.checkbox:first-child label {
+	padding-left: 0;
+}

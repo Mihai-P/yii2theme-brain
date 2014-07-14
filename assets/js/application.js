@@ -408,7 +408,7 @@ $(function() {
 
 	//===== Default select =====//
 
-	$(".form-horizontal .select2").select2({
+	$(".select2").select2({
 		minimumResultsForSearch: "5",
 		width: "100%"
 	});
