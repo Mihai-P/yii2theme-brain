@@ -23,5 +23,6 @@ class CustomAsset extends AssetBundle
     ];
 	public $js = [
 		'js/application.js',
+		'js/typeahead.jquery.js',
     ];    
 }
