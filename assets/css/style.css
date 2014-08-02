@@ -51,7 +51,7 @@
 
 
 /* REQUIRED FIELDS */
-div.required label:after {
+div.required label.control-label:after {
     content: " *";
     color: red;
 }
@@ -191,4 +191,38 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 
 #rtl-support .tt-dropdown-menu {
   text-align: right;
+}
+
+/* modal */
+.modal-dialog .form-group label {
+	margin-top: 7px;
+}
+.modal-title input {
+	border: 0;
+	background-color: transparent;
+}
+
+
+/* forms 2 controls per row */
+.row.controls2 {
+	margin-bottom: 0;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.help-block {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.hint-block {
+	color: #999;
+}
+.panel .form-group:first-child, .well .form-group:first-child {
+	margin-top: 0;
+}
+
+.bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-off, .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on {
+	line-height: 26px;
 }

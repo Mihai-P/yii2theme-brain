@@ -26,7 +26,7 @@ class ActiveForm extends \yii\widgets\ActiveForm
      * @var array the default configuration used by [[field()]] when creating a new field object.
      */
     public $fieldConfig = [
-            'template' => "<div class=\"col-sm-2\">{label}</div>\n<div class=\"col-sm-10\">{input}</div>",
+            'template' => "<div class=\"col-sm-2\">{label}</div>\n<div class=\"col-sm-10\">{input}{error}{hint}</div>",
         ];
 
     /**
