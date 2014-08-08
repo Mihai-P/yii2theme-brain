@@ -25,7 +25,7 @@ namespace theme\widgets;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class StatusColumn extends \yii\grid\DataColumn
+class SortColumn extends \yii\grid\DataColumn
 {
     /**
      * @var string the attribute name associated with this column. When neither [[content]] nor [[value]]
@@ -33,7 +33,7 @@ class StatusColumn extends \yii\grid\DataColumn
      *
      * Also, if [[label]] is not specified, the label associated with the attribute will be displayed.
      */
-    public $attribute = 'status';
+    public $attribute = 'sort_order';
     /**
      * @var string label to be displayed in the [[header|header cell]] and also to be used as the sorting
      * link label when sorting is enabled for this column.
@@ -41,33 +41,11 @@ class StatusColumn extends \yii\grid\DataColumn
      * of [[\yii\db\ActiveRecord]], the label will be determined using [[\yii\db\ActiveRecord::getAttributeLabel()]].
      * Otherwise [[\yii\helpers\Inflector::camel2words()]] will be used to get a label.
      */
-    public $label = 'Status';
+    public $label = 'Order';
+    
     /**
      * @var array the HTML attributes for the column group tag.
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
-    public $options = ['style' => 'width: 80px;'];
-
-    public $enableSorting = false;
-
-    /**
-     * @inheritdoc
-     */
-    protected function renderDataCellContent($model, $key, $index)
-    {
-        switch($model->status) {
-            case 'active':
-                return '<span class="label label-success">Active</span>';
-                break;
-            case 'inactive':
-                return '<span class="label label-warning">Inactive</span>';
-                break;
-        }
-        
-        if ($this->content === null) {
-            return ucfirst($this->grid->formatter->format($this->getDataCellValue($model, $key, $index), $this->format));
-        } else {
-            return parent::renderDataCellContent($model, $key, $index);
-        }
-    }    
+    public $options = ['style' => 'width: 80px;'];    
 }
