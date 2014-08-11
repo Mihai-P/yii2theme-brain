@@ -629,9 +629,15 @@ $(function() {
 	});
 
 
-
 	//===== Tags Input =====//	
-		
+	$('.tags-autocomplete-url').each(function() {
+		url = $(this).attr('data-autocomplete-url');
+		$(this).tagsInput({
+			width:'100%',
+			autocomplete_url: url
+		})
+    });
+
 	$('.tags').tagsInput({width:'100%'});
 	$('.tags-autocomplete').tagsInput({
 		width:'100%',
