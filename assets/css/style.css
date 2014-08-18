@@ -269,3 +269,17 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 .panel > .table-responsive {
 	min-height: 400px;
 }
+
+#login-form .panel-body .form-group i.fa {
+	position: absolute;
+	top: 22px;
+	right: 0;
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;	
+}
+#login-form .checkbox label {
+	padding-left: 0;
+}
