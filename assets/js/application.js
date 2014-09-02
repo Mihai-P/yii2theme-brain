@@ -13,7 +13,7 @@ var myGrid = {
 		        "data":{items: selected}
 		    })
 		    .success(function ( response ) {
-		    	$.pjax.reload({container: "#main-pjax", fragment: "#main-pjax", async:false});
+		    	$.pjax.reload({container: "#main-pjax", async:false});
 		    }); 
 		} else {
 			alert('Select some items first');
@@ -26,7 +26,7 @@ var myGrid = {
 	        "cache": false,
 	    })
 	    .success(function ( response ) {
-	    	$.pjax.reload({container: "#main-pjax", fragment: "#main-pjax", async:false, timeout: 4000});
+	    	$.pjax.reload({container: "#main-pjax", async:false, timeout: 4000});
 	    }); 
   	},
   	init: function(element) {

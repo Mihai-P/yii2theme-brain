@@ -61,7 +61,14 @@ class BrainAsset extends AssetBundle
 		'js/plugins/interface/fullcalendar.min.js',
 		'js/plugins/interface/collapsible.min.js',
 
-		'js/bootstrap.min.js',
+		//'js/bootstrap.min.js',
 		//'js/charts/simple_graph.js',
+    ];
+    public $depends = [
+        'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
+        'yii\jui\ThemeAsset',
+        'yii\jui\CoreAsset',
     ];    
 }

@@ -283,3 +283,19 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 #login-form .checkbox label {
 	padding-left: 0;
 }
+
+.has-success .bootstrap-switch {
+	border-color: #239169;
+}
+.bootstrap-switch {
+	border-radius: 0;
+}
+.bootstrap-switch .bootstrap-switch-handle-on, .bootstrap-switch .bootstrap-switch-handle-off {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+.bootstrap-switch.bootstrap-switch-small {
+	min-width: 78px;
+}
