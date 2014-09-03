@@ -8,8 +8,9 @@ namespace theme\widgets;
 
 use Yii;
 use yii\helpers\Html;
+use yii\widgets\InputWidget;
 
-class InputTags extends yii\widgets\InputWidget {
+class InputTags extends InputWidget {
 
     public function init()
     {

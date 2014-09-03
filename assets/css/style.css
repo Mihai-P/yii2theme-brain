@@ -299,3 +299,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 .bootstrap-switch.bootstrap-switch-small {
 	min-width: 78px;
 }
+
+.ui-autocomplete {
+	z-index: 1101;
+}
