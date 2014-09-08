@@ -36,7 +36,7 @@ class InputFile extends \mihaildev\elfinder\InputFile {
             $this->suffix = Yii::$app->params['fontend-url'];
 
         if(empty($this->previewButtonOptions['id']))
-            $this->previewButtonOptions['id'] = $this->options['id'].'_preview';
+            $this->previewButtonOptions['id'] = $this->id.'_preview';
 
         $this->previewButtonOptions['type'] = 'button';
         $this->previewButtonOptions['data-toggle'] = 'modal';
