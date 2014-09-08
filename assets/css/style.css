@@ -267,7 +267,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 
 
 .panel > .table-responsive {
-	min-height: 400px;
+	overflow: visible;
 }
 
 #login-form .panel-body .form-group i.fa {
