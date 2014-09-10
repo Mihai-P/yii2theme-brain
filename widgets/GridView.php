@@ -48,6 +48,7 @@ class GridView extends \yii\grid\GridView
     public $layout = "\n{items}\n                
                 <div class=\"table-footer\">\n
                     {actions}\n
+                    {summary}\n
                     {pager}\n
                 </div>";
 

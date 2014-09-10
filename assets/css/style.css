@@ -16,7 +16,10 @@
 }
 
 .table-responsive .summary {
-	display: none;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	padding-top: 7px;
 }
 
 /* SEARCH FORM */
