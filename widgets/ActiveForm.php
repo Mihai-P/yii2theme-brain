@@ -13,7 +13,7 @@ namespace theme\widgets;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class ActiveForm extends \yii\widgets\ActiveForm
+class ActiveForm extends \yii\bootstrap\ActiveForm
 {
     /**
      * @var array the default options for the label tags. The parameter passed to [[label()]] will be

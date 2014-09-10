@@ -28,9 +28,6 @@
 .panel .form-inline .form-group:first-child {
 	margin-top: 0;
 }
-.panel .form-inline .form-group .col-sm-2 {
-	padding-top: 6px;
-}
 
 .form-inline .advance-search .form-group {
 	display: block;
@@ -302,4 +299,36 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 
 .ui-autocomplete {
 	z-index: 1101;
+}
+
+.inline-checkbox {
+	margin-top: 7px;
+	height: 27px;
+}
+
+/* DATEPICKER FIXES */
+.ui-datepicker .ui-datepicker-title {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-weight: bold;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	background-image: none;
+}
+.ui-state-highlight {
+	color: black;
+}
+.ui-datepicker-today .ui-state-highlight {
+	font-weight: bold;
+	color: black;
+}
+.ui-datepicker .ui-state-hover {
+	color: black;
+}
+
+.form-control.select2-container-multi {
+	height: auto;
+	padding: 0;
+	border: 0;
 }

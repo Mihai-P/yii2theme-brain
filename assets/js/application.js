@@ -65,6 +65,9 @@ var rel = ["alternate","author","bookmark","help","license","next","nofollow","n
 var target = ["_blank","_parent","_self","_top"];
 
 $(function() {
+	$(document).on('click', 'a.ui-datepicker-prev, a.ui-datepicker-next, th.prev, th.switch, span.year', function (e) {
+        e.stopPropagation();
+    });	
 	$('select.pagination').on('change', function() {
 		document.location.href = $(this).attr('data-change') + '?records=' + $(this).val();
 	});
