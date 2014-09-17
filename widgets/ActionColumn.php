@@ -21,7 +21,7 @@ use yii\helpers\Url;
  * 'columns' => [
  *     // ...
  *     [
- *         'class' => 'yii\grid\ActionColumn',
+ *         'class' => 'theme\widgets\ActionColumn',
  *         // you may configure additional properties here
  *     ],
  * ]
@@ -44,7 +44,7 @@ class ActionColumn extends \yii\grid\ActionColumn
     public $template = '{update} {status} {delete}';
 
     /**
-     * Get the proper access privileges name from the current controller
+     * Get the simpler access privileges name from the current controller
      * @return string
     */
     protected function getCompatibilityId() {
@@ -60,7 +60,8 @@ class ActionColumn extends \yii\grid\ActionColumn
      */
     protected function initDefaultButtons()
     {
-        if(\Yii::$app->user->checkAccess('read::' . $this->getCompatibilityId())) {
+        $controller = $this->getCompatibilityId();
+        if(\Yii::$app->user->checkAccess('read::' . $controller)) {
             if (!isset($this->buttons['view'])) {
                 $this->buttons['view'] = function ($url, $model) {
                     return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
@@ -71,7 +72,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                 };
             }
         }
-        if(\Yii::$app->user->checkAccess('update::' . $this->getCompatibilityId())) {
+        if(\Yii::$app->user->checkAccess('update::' . $controller)) {
             if (!isset($this->buttons['status'])) {
                 $this->buttons['status'] = function ($url, $model) {
                     if($model->status == 'active') 
@@ -100,7 +101,7 @@ class ActionColumn extends \yii\grid\ActionColumn
                 };
             }
         }
-        if(\Yii::$app->user->checkAccess('delete::' . $this->getCompatibilityId())) {
+        if(\Yii::$app->user->checkAccess('delete::' . $controller)) {
             if (!isset($this->buttons['delete'])) {
                 $this->buttons['delete'] = function ($url, $model) {
                     return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [

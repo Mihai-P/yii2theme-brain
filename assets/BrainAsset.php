@@ -12,8 +12,7 @@ use yii\web\AssetBundle;
 /**
  * Asset bundle for the It's Brain theme from 
  *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @since 2.0
+ * @author Mihai Petrescu <mihai@2ezweb.com.au>
  */
 class BrainAsset extends AssetBundle
 {
@@ -25,17 +24,7 @@ class BrainAsset extends AssetBundle
         'http://fonts.googleapis.com/css?family=Cuprum',
     ];
 	public $js = [
-        //'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
 		'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
-		/*
-		'js/plugins/charts/flot.js',
-		'js/plugins/charts/flot.orderbars.js',
-		'js/plugins/charts/flot.pie.js',
-		'js/plugins/charts/flot.time.js',
-		'js/plugins/charts/flot.animator.min.js',
-		'js/plugins/charts/excanvas.min.js',
-		'js/plugins/charts/flot.resize.min.js',
-		*/
 		'js/plugins/forms/uniform.min.js',
 		'js/plugins/forms/select2.min.js',
 		'js/plugins/forms/inputmask.js',
@@ -45,13 +34,10 @@ class BrainAsset extends AssetBundle
 		'js/plugins/forms/multiselect.js',
 		'js/plugins/forms/validate.min.js',
 		'js/plugins/forms/tags.min.js',
-
 		'js/plugins/forms/uploader/plupload.full.min.js',
 		'js/plugins/forms/uploader/plupload.queue.min.js',
-
 		'js/plugins/forms/wysihtml5/wysihtml5.min.js',
 		'js/plugins/forms/wysihtml5/toolbar.js',
-
 		'js/plugins/interface/jgrowl.min.js',
 		'js/plugins/interface/datatables.min.js',
 		'js/plugins/interface/prettify.js',
@@ -60,9 +46,6 @@ class BrainAsset extends AssetBundle
 		'js/plugins/interface/timepicker.min.js',
 		'js/plugins/interface/fullcalendar.min.js',
 		'js/plugins/interface/collapsible.min.js',
-
-		//'js/bootstrap.min.js',
-		//'js/charts/simple_graph.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',
