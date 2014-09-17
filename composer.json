@@ -1,7 +1,7 @@
 {
-	"name": "tez/theme",
+	"name": "tez/yii2-brain-theme",
 	"description": "Yii 2 Theme",
-	"keywords": ["yii", "yii2", "theme"],
+	"keywords": ["yii2", "theme"],
 	"type": "yii2-theme",
 	"license": "BSD-3-Clause",
 	"support": {
