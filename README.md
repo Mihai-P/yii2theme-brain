@@ -1,3 +1,6 @@
+THIS IS AN ALPHA STATE DO NOT USE IT FOR PRODUCTION
+===========
+
 Yii 2 Theme
 ===========
 
