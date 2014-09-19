@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  */
 class BrainAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/tez/theme/assets/Brain/Liquid/Light/';
+    public $sourcePath = '@theme/assets/Brain/Liquid/Light/';
     public $css = [
         'css/brain-theme.css',
         'css/styles.css',
@@ -24,7 +24,6 @@ class BrainAsset extends AssetBundle
         'http://fonts.googleapis.com/css?family=Cuprum',
     ];
 	public $js = [
-		'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
 		'js/plugins/forms/uniform.min.js',
 		'js/plugins/forms/select2.min.js',
 		'js/plugins/forms/inputmask.js',
@@ -49,9 +48,8 @@ class BrainAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\JqueryAsset',
+        'yii\jui\JuiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'yii\jui\ThemeAsset',
-        'yii\jui\CoreAsset',
     ];    
 }

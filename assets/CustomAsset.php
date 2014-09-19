@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class CustomAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/tez/theme/assets/';
+    public $sourcePath = '@theme/assets/';
     public $css = [
         'css/style.css',
     ];
