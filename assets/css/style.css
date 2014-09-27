@@ -270,7 +270,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 	overflow: visible;
 }
 
-#login-form .panel-body .form-group i.fa {
+.small-form .panel-body .form-group i.fa {
 	position: absolute;
 	top: 22px;
 	right: 0;
@@ -280,7 +280,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 	line-height: 34px;
 	text-align: center;	
 }
-#login-form .checkbox label {
+.small-form .checkbox label {
 	padding-left: 0;
 }
 
