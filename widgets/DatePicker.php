@@ -20,7 +20,7 @@ class DatePicker extends \yii\jui\DatePicker
     protected function renderWidget()
     {
         if ($this->hasModel()) {
-            $this->model->{$this->attribute} = $this->model->{$this->attribute} ? Yii::$app->formatter->asDate($this->model->{$this->attribute}, 'medium') : '';
+            $this->model->{$this->attribute} = $this->model->{$this->attribute} ? Yii::$app->formatter->asDate($this->model->{$this->attribute}, 'medium') : null;
         }
         return parent::renderWidget();
     }
