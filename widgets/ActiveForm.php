@@ -39,7 +39,7 @@ class ActiveForm extends \yii\bootstrap\ActiveForm
     /**
      * @var boolean whether to perform validation when the form is submitted.
      */
-    public $validateOnSubmit = true;    
+    public $validateOnSubmit = false;
 
     /**
      * @var boolean whether to perform validation when the form is submitted.

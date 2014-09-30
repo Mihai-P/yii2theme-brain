@@ -330,7 +330,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 	color: black;
 }
 
-.form-control.select2-container-multi {
+.form-control.select2-container {
 	height: auto;
 	padding: 0;
 	border: 0;
