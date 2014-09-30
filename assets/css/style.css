@@ -329,6 +329,9 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 .ui-datepicker .ui-state-hover {
 	color: black;
 }
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	width: 35%;
+}
 
 .form-control.select2-container {
 	height: auto;

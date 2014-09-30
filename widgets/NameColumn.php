@@ -63,11 +63,11 @@ class NameColumn extends \yii\grid\DataColumn
     {
         $controller = $this->getCompatibilityId();
         if($this->hasView && \Yii::$app->user->checkAccess('read::' . $controller)) {
-            return Html::a($model->name, $this->createUrl('view', $model, $key, $index), ['data-pjax' => "0"]);
+            return Html::a($model->{$this->attribute}, $this->createUrl('view', $model, $key, $index), ['data-pjax' => "0"]);
         } elseif(\Yii::$app->user->checkAccess('update::' . $controller)) {
-            return Html::a($model->name, $this->createUrl('update', $model, $key, $index), ['data-pjax' => "0"]);
+            return Html::a($model->{$this->attribute}, $this->createUrl('update', $model, $key, $index), ['data-pjax' => "0"]);
         } else {
-            return $controller . $model->name;
+            return $model->{$this->attribute};
         }        
     }
 
