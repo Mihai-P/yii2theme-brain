@@ -342,3 +342,18 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 table.detail-view > tbody > tr:first-child th, table.detail-view > tbody > tr:first-child td {
 	border-top: 0;
 }
+/*
+h1, h2, h3, h4, h5, h6, .navigation > li > a, .stats li span {
+	font-family: Helvetica, Arial, sans-serif;
+}
+.navigation > li > a {
+	font-size: 13px;
+}
+.navigation > li > ul li a {
+	font-size: 12px;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+*/
