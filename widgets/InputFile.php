@@ -9,10 +9,7 @@ namespace theme\widgets;
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\Json;
-use yii\widgets\InputWidget;
 use mihaildev\elfinder\AssetsCallBack;
-use mihaildev\elfinder\ElFinder;
-use yii\web\JsExpression;
 
 
 class InputFile extends \mihaildev\elfinder\InputFile {
