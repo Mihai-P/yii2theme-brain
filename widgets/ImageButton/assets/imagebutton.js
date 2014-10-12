@@ -29,7 +29,7 @@
         var modal = $(this).closest('.site-widget');
         $("#" + modal.attr('data-target')).val(modal.find(':input, select').serialize());
         modal.find('button.btn-warning').trigger('click');
-        var image = $("#" + modal.attr('data-target')).closest('.input-group').find('img');
+        var image = $("#" + modal.attr('data-target')).closest('div').find('img');
         image.attr('src', image.attr('data-sufix') + modal.find(':input[name="image"]').val());
     });
 }(window.jQuery));

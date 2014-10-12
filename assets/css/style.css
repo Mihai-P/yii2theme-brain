@@ -365,3 +365,7 @@ body {
 .image-widget img {
     width: 100%;
 }
+/*
+div.row .form-group {
+    margin: 0 0 0 -15px;
+}*/
