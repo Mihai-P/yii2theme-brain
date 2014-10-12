@@ -1,0 +1,9 @@
+.editable-imagebutton {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editable-imagebutton span {
+    width: 70px;
+    display: inline-block;
+}
