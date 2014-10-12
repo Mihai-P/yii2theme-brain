@@ -65,5 +65,5 @@ $id = $options['id'];
         Html::img($model->image ? Yii::$app->params['fontend-url'] . $model->image : Yii::$app->assetManager->getPublishedUrl('@theme/widgets/ImageButton/assets') . '/placeholder.jpg',
             ['data-sufix' => Yii::$app->params['fontend-url']]),
         '#' . $id . 'popup',
-        ['data-toggle' => "modal", 'role' => "button"]);?>
+        ['data-toggle' => "modal", 'role' => "button", 'class' => 'image-widget']);?>
 </div>
