@@ -379,3 +379,9 @@ div.row .form-group {
     color: #ccc;
     background-color: #f9f9f9!important;
 }
+
+.modal-dialog .checkbox {
+	margin-top: 3px;
+	margin-bottom: 0;
+	float: left;
+}

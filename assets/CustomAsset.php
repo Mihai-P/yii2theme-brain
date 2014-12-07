@@ -25,5 +25,6 @@ class CustomAsset extends AssetBundle
 		'js/application.js',
 		'js/typeahead.jquery.js',
 		'js/jquery.popup.js',
+        'js/ajaxoperations.js',
     ];    
 }

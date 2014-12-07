@@ -21,6 +21,7 @@ class BrainAsset extends AssetBundle
         'css/brain-theme.css',
         'css/styles.css',
         'css/font-awesome.min.css',
+        'css/wysihtml5/wysiwyg-color.css',
         'http://fonts.googleapis.com/css?family=Cuprum',
     ];
 	public $js = [

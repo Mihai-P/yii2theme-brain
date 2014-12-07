@@ -30,7 +30,7 @@ class InputFile extends \mihaildev\elfinder\InputFile {
         parent::init();
 
         if(empty($this->suffix))
-            $this->suffix = Yii::$app->params['fontend-url'];
+            $this->suffix = Yii::$app->params['frontend-url'];
 
         if(empty($this->previewButtonOptions['id']))
             $this->previewButtonOptions['id'] = $this->options['id'].'_preview';

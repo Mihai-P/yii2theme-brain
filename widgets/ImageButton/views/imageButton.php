@@ -61,8 +61,8 @@ $id = $options['id'];
 <!-- /form modal -->
     <?= $input?>
     <?= Html::a(
-        Html::img($model->image ? Yii::$app->params['fontend-url'] . $model->image : Yii::$app->assetManager->getPublishedUrl('@theme/widgets/ImageButton/assets') . '/placeholder.jpg',
-            ['data-sufix' => Yii::$app->params['fontend-url']]),
+        Html::img($model->image ? Yii::$app->params['frontend-url'] . $model->image : Yii::$app->assetManager->getPublishedUrl('@theme/widgets/ImageButton/assets') . '/placeholder.jpg',
+            ['data-sufix' => Yii::$app->params['frontend-url']]),
         '#' . $id . 'popup',
         ['data-toggle' => "modal", 'role' => "button", 'class' => 'image-widget']);?>
 
