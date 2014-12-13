@@ -385,3 +385,7 @@ div.row .form-group {
 	margin-bottom: 0;
 	float: left;
 }
+
+ul.navigation i.fa.pull-right.fa-align-justify {
+	margin-top: 3px;
+}
