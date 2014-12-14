@@ -389,3 +389,23 @@ div.row .form-group {
 ul.navigation i.fa.pull-right.fa-align-justify {
 	margin-top: 3px;
 }
+@media (min-width: 768px) {
+	li.user.dropdown {
+		width: 190px;
+	}
+}
+/*
+.sidebar {
+	width: 180px;
+}
+
+.page-content {
+	margin-left: 210px;
+}
+*/
+
+.navbar .container-fluid {
+	background-image: url('../images/yii2.png');
+	background-repeat: no-repeat;
+	background-position: center 2px;
+}
