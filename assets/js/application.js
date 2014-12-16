@@ -65,6 +65,29 @@ var rel = ["alternate","author","bookmark","help","license","next","nofollow","n
 var target = ["_blank","_parent","_self","_top"];
 
 $(function() {
+	$( document ).on( "click", "a.add-bookmark", function(event) {
+		event.preventDefault();
+		$("#add-bookmark form").resetToDefault();
+	});
+	$('#add-bookmark').on('submit','form',function(event){
+		event.preventDefault();
+		self = $(this);
+		$.ajax({
+			url: self.attr("action"),
+			type: "POST",
+			dataType: "json",
+			data: self.serialize(),
+			success: function( response ) {
+				if(response.success) {
+					$.pjax.reload({container: "#bookmark-list", async:false});
+					$('#add-bookmark').modal('toggle');;
+				} else {
+					$.growl.error({ message: response.message });
+				}
+			}
+		});
+	});
+
 	$(document).on('click', 'a.ui-datepicker-prev, a.ui-datepicker-next, th.prev, th.switch, span.year', function (e) {
         e.stopPropagation();
     });	

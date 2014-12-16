@@ -75,8 +75,8 @@ class InputFile extends \mihaildev\elfinder\InputFile {
         AssetsCallBack::register($this->getView());
 
         if (!empty($this->multiple))
-            $this->getView()->registerJs("ElFinderFileCallback.register(".Json::encode($this->options['id']).", function(files, id){ var _f = []; for (var i in files) { _f.push(files[i].url); } \$('#' + id).val(_f.join(', ')); return true;}); $('#".$this->buttonOptions['id']."').click(function(){ElFinderFileCallback.openManager(".Json::encode($this->_managerOptions).");});");
+            $this->getView()->registerJs("mihaildev.elFinder.register(".Json::encode($this->options['id']).", function(files, id){ var _f = []; for (var i in files) { _f.push(files[i].url); } \$('#' + id).val(_f.join(', ')); return true;}); $('#".$this->buttonOptions['id']."').click(function(){mihaildev.elFinder.openManager(".Json::encode($this->_managerOptions).");});");
         else
-            $this->getView()->registerJs("ElFinderFileCallback.register(".Json::encode($this->options['id']).", function(file, id){\r\n\t \$('#' + id).val(file.url.replace('".$this->suffix."', ''));\r\n\t \$('#' + id + '_preview_popup .modal-body').html('<img width=\"100%\" src=\"' + file.url + '\">'); return true;}); $('#".$this->buttonOptions['id']."').click(function(){ElFinderFileCallback.openManager(".Json::encode($this->_managerOptions).");});");
+            $this->getView()->registerJs("mihaildev.elFinder.register(".Json::encode($this->options['id']).", function(file, id){\r\n\t \$('#' + id).val(file.url.replace('".$this->suffix."', ''));\r\n\t \$('#' + id + '_preview_popup .modal-body').html('<img width=\"100%\" src=\"' + file.url + '\">'); return true;}); $('#".$this->buttonOptions['id']."').click(function(){mihaildev.elFinder.openManager(".Json::encode($this->_managerOptions).");});");
     }
 }
