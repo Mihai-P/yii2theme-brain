@@ -8,6 +8,10 @@
 	background-color: transparent;
 	margin-bottom: 0;
 }
+.breadcrumb a {
+	color: white;
+	font-weight: bold;
+}
 .panel .panel-heading .pagination select.input-sm {
 	font-size: 12px;
 	border-radius: 0;
