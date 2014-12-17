@@ -419,8 +419,16 @@ ul.navigation i.fa.pull-right.fa-align-justify {
 	padding: 8px 12px;
 	line-height: 20px;
 }
+.navbar-nav > li > div > a {
+	position: relative;
+	display: block;
+}
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > div > a {
 	color: #fff;
+}
+.navbar-inverse .navbar-nav .open > a {
+	color: #fff;
+	background-color: #080808;
 }
 
 /*
@@ -545,7 +553,7 @@ Navbar custom dropdown menu
 	text-decoration: none;
 }
 .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a,
-.navbar-nav > .bookmarks-menu .dropdown-menu > li > a{
+.navbar-nav > .bookmarks-menu .dropdown-menu > li > a {
 	font-size: 12px;
 	color: #444444;
 }
@@ -574,6 +582,9 @@ Navbar custom dropdown menu
 }
 .navbar-nav > .bookmarks-menu .dropdown-menu > li > a {
 	clear: none;
+}
+.navbar-nav > .bookmarks-menu .dropdown-menu > li.footer > a {
+	clear: both;
 }
 
 .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .glyphicon.warning,

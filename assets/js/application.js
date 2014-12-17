@@ -69,6 +69,8 @@ $(function() {
 		event.preventDefault();
 		$("#add-bookmark form").resetToDefault();
 	});
+	$(document)
+		.on('pjax:end', function() { $('a').popover() })
 	$('#add-bookmark').on('submit','form',function(event){
 		event.preventDefault();
 		self = $(this);
@@ -79,7 +81,7 @@ $(function() {
 			data: self.serialize(),
 			success: function( response ) {
 				if(response.success) {
-					$.pjax.reload({container: "#bookmark-list", async:false});
+					// $.pjax.reload({container: "#bookmark-list", async:false});
 					$('#add-bookmark').modal('toggle');;
 				} else {
 					$.growl.error({ message: response.message });
@@ -87,6 +89,20 @@ $(function() {
 			}
 		});
 	});
+	$( document ).on( "click", "a.edit-bookmark", function(event) {
+		event.preventDefault();
+		$.ajax({
+			url: $(this).attr("data-details"),
+			type: "POST",
+			dataType: "json",
+			success: function( response ) {
+				$.each(response, function(key, value) {
+					$("#add-bookmark #bookmark-" + key).val(value);
+				});
+			}
+		});
+	});
+
 
 	$(document).on('click', 'a.ui-datepicker-prev, a.ui-datepicker-next, th.prev, th.switch, span.year', function (e) {
         e.stopPropagation();
