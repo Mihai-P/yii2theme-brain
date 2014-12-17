@@ -544,6 +544,9 @@ Navbar custom dropdown menu
 	/* Prevent text from breaking */
 	border-bottom: 1px solid #f4f4f4;
 }
+.navbar-nav > .bookmarks-menu .dropdown-menu > li > a {
+	border: 0;
+}
 .navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a:hover,
 .navbar-nav > .bookmarks-menu .dropdown-menu > li > a:hover,
 .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:hover,
@@ -861,6 +864,7 @@ ul.dropdown-menu > li.footer {
 .navbar-nav > .notifications-menu  > ul.dropdown-menu li,
 .navbar-nav > .bookmarks-menu  > ul.dropdown-menu li {
 	clear: both;
+	border-bottom: 1px solid #f4f4f4;
 }
 .navbar-nav > .notifications-menu  > ul.dropdown-menu li i,
 .navbar-nav > .bookmarks-menu  > ul.dropdown-menu li i {
