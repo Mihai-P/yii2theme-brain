@@ -82,7 +82,7 @@ $(function() {
 			success: function( response ) {
 				if(response.success) {
 					// $.pjax.reload({container: "#bookmark-list", async:false});
-					$('#add-bookmark').modal('toggle');;
+					$('#add-bookmark').modal('toggle');
 				} else {
 					$.growl.error({ message: response.message });
 				}
