@@ -13,6 +13,8 @@ use yii\base\Event;
 
 class BrainThemeBootstrap implements BootstrapInterface {
     public function bootstrap($app){
+        echo "Hello World !!!";
+        asdfasdfasdf
         \Yii::$classMap = array_merge(\Yii::$classMap,[
             //'yii\grid\CheckboxColumn'=>'@yii/adminUi/widget/CheckboxColumn.php',
             'yii\grid\ActionColumn'=>'@theme/widget/ActionColumn.php',
