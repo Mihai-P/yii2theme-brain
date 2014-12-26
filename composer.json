@@ -2,7 +2,7 @@
 	"name": "tez/yii2-brain-theme",
 	"description": "Yii 2 Theme",
 	"keywords": ["yii2", "theme"],
-	"type": "yii2-theme",
+	"type": "yii2-extension",
 	"license": "BSD-3-Clause",
 	"support": {
 		"issues": "https://github.com/Mihai-P/yii2theme-brain/issues?state=open",
