@@ -25,5 +25,8 @@
 		"psr-4": {
 			"theme\\": ""
 		}
+	},
+	"extra":{
+	  "bootstrap":"theme\\BrainThemeBootstrap"
 	}
 }
