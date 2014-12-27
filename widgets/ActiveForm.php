@@ -16,13 +16,6 @@ namespace theme\widgets;
 class ActiveForm extends \yii\bootstrap\ActiveForm
 {
     /**
-     * @var array the default options for the label tags. The parameter passed to [[label()]] will be
-     * merged with this property when rendering the label tag.
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
-     */
-    public $labelOptions = ['class' => 'col-sm-2 control-label'];
-
-    /**
      * @var array the default configuration used by [[field()]] when creating a new field object.
      */
     public $fieldConfig = [

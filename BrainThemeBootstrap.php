@@ -13,12 +13,10 @@ use yii\base\Event;
 
 class BrainThemeBootstrap implements BootstrapInterface {
     public function bootstrap($app){
-        echo "Hello World !!!";
-        asdfasdfasdf
-        \Yii::$classMap = array_merge(\Yii::$classMap,[
+       //\Yii::$classMap = array_merge(\Yii::$classMap,[
             //'yii\grid\CheckboxColumn'=>'@yii/adminUi/widget/CheckboxColumn.php',
-            'yii\grid\ActionColumn'=>'@theme/widget/ActionColumn.php',
-        ]);
+            //'yii\grid\ActionColumn'=>'@theme/widgets/ActionColumn.php',
+        //]);
         /*
         $app->set('view', [
             'class'=>'yii\web\View',
@@ -54,17 +52,19 @@ class BrainThemeBootstrap implements BootstrapInterface {
             }
         });
         */
-        Yii::$container->set('yii\grid\GridView',
+
+       Yii::$container->set('yii\bootstrap\ActiveForm',
             [
-                'tableOptions'=>['class'=>'table table-condensed'],
-                'filterPosition' => '',
-                'layout' => "\n{items}\n
-                <div class=\"table-footer row\">\n
-                    <div class=\"col-xs-4\"></div>\n
-                    <div class=\"col-xs-4\">{summary}</div>\n
-                    <div class=\"col-xs-4\"><div style=\"display: inline-block;\" class=\"pull-right\">{pager}</div>\n
-                </div>",
+                //'labelOptions' => ['class' => 'col-sm-2 control-label'],
+                'fieldConfig' => [
+                    'template' => "<div class=\"col-sm-2\">{label}</div>\n<div class=\"col-sm-10\">{input}{error}{hint}</div>",
+                ],
+                'options' => [
+                    'class' => "form-horizontal",
+                ],
+                'validateOnSubmit' => false,
+                'validateOnChange' => false,
             ]
-        );
+       );
     }
 }
