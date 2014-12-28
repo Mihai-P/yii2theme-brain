@@ -55,7 +55,6 @@ class BrainThemeBootstrap implements BootstrapInterface {
 
        Yii::$container->set('yii\bootstrap\ActiveForm',
             [
-                //'labelOptions' => ['class' => 'col-sm-2 control-label'],
                 'fieldConfig' => [
                     'template' => "<div class=\"col-sm-2\">{label}</div>\n<div class=\"col-sm-10\">{input}{error}{hint}</div>",
                 ],
@@ -66,5 +65,11 @@ class BrainThemeBootstrap implements BootstrapInterface {
                 'validateOnChange' => false,
             ]
        );
+        Yii::$container->set('yii\grid\CheckboxColumn',
+            [
+                'options' => ['style' => 'width: 36px; text-align: center;'],
+            ]
+        );
+
     }
 }
