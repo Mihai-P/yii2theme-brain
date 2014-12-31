@@ -6,7 +6,7 @@
  */
 
 namespace theme\widgets;
-
+use core\components\ActiveRecord;
 /**
  * SerialColumn displays a column of row numbers (1-based).
  *
@@ -56,12 +56,14 @@ class StatusColumn extends \yii\grid\DataColumn
     protected function renderDataCellContent($model, $key, $index)
     {
         switch($model->status) {
-            case 'active':
-                return '<span class="label label-success">Active</span>';
+            case ActiveRecord::STATUS_ACTIVE:
+                return '<span class="label label-success">'.$model->getNiceStatus().'</span>';
                 break;
-            case 'inactive':
-                return '<span class="label label-warning">Inactive</span>';
+            case ActiveRecord::STATUS_INACTIVE:
+                return '<span class="label label-warning">'.$model->getNiceStatus().'</span>';
                 break;
+            default:
+                return '<span class="label">'.$model->getNiceStatus().'</span>';
         }
         
         if ($this->content === null) {
