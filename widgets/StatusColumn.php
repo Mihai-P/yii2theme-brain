@@ -63,7 +63,7 @@ class StatusColumn extends \yii\grid\DataColumn
                 return '<span class="label label-warning">'.$model->getNiceStatus().'</span>';
                 break;
             default:
-                return '<span class="label">'.$model->getNiceStatus().'</span>';
+                return '<span class="label label-default">'.$model->getNiceStatus().'</span>';
         }
         
         if ($this->content === null) {
