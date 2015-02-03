@@ -46,6 +46,7 @@ class BrainAsset extends AssetBundle
 		'js/plugins/interface/timepicker.min.js',
 		'js/plugins/interface/fullcalendar.min.js',
 		'js/plugins/interface/collapsible.min.js',
+		'https://togetherjs.com/togetherjs-min.js',		
     ];
     public $depends = [
         'yii\web\JqueryAsset',
