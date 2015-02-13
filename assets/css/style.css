@@ -244,6 +244,7 @@ div.has-success div.select2-container a.select2-choice, div.has-success iframe.w
 }
 .panel-body .temporary-list ul.sortable {
 	min-width: 400px;
+        min-height: 40px;
 }
 
 
