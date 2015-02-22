@@ -773,6 +773,11 @@ Navbar custom dropdown menu
 .navbar-nav > .user-menu > .dropdown-menu > li.user-footer .btn-default {
 	color: #666666;
 }
+
+body.staging {
+    ..
+}
+
 /* Add fade animation to dropdown menus */
 .open > .dropdown-menu {
 	animation-name: fadeAnimation;
