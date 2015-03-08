@@ -367,6 +367,10 @@ body {
     margin: 0 0 10px 0;
 }
 
+.modal-dialog .modal-body .form-group .form-group{
+    margin: 0;
+}
+
 .image-widget img {
     width: 100%;
 }

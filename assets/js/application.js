@@ -197,7 +197,7 @@ $(document).on('change', '.form-search select:not(.form-search .advanced-search 
     $(this).closest("form").submit();
 });
 
-
+$.fn.getType = function(){ return this[0].tagName.toLowerCase() == "input" ? this[0].type.toLowerCase() : this[0].tagName.toLowerCase(); }
 
 
 /* ========================================================
