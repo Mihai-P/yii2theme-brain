@@ -22,7 +22,6 @@ class BrainAsset extends AssetBundle
         'css/styles.css',
         'css/font-awesome.min.css',
         'css/wysihtml5/wysiwyg-color.css',
-        'http://fonts.googleapis.com/css?family=Cuprum',
     ];
 	public $js = [
 		'js/plugins/forms/uniform.min.js',
@@ -46,7 +45,6 @@ class BrainAsset extends AssetBundle
 		'js/plugins/interface/timepicker.min.js',
 		'js/plugins/interface/fullcalendar.min.js',
 		'js/plugins/interface/collapsible.min.js',
-		'https://togetherjs.com/togetherjs-min.js',		
     ];
     public $depends = [
         'yii\web\JqueryAsset',
@@ -54,4 +52,10 @@ class BrainAsset extends AssetBundle
         //'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
     ];    
+    
+    public function init()
+    {
+        parent::init();
+        $this->sourcePath = '@theme/assets/Brain/Liquid/'. (YII_ENV == 'dev' ? 'Dark' : 'Light') . '/';
+    }        
 }

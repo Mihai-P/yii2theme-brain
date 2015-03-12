@@ -4,6 +4,7 @@
 (function($) {
     $(document).on('change', '[data-ajax-update]', function (e) {
         var element = $(this);
+        console.log(element);
         jQuery.ajax({
             "type": "POST",
             "url": element.attr('data-ajax-update'),
