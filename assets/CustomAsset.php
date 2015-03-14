@@ -21,6 +21,7 @@ class CustomAsset extends AssetBundle {
     public $sourcePath = '@theme/assets/';
     public $css = [
         'css/style.css',
+        '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
     ];
     public $js = [
         'js/application.js',
