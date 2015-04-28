@@ -908,6 +908,10 @@ ul.dropdown-menu > li.footer {
     background-color: #D36A5F;
 }
 
+.theme-dark .cke_source {
+    color: black;
+}
+
 /*.navbar-nav > .notifications-menu > .dropdown-menu, .navbar-nav > .messages-menu > .dropdown-menu, .navbar-nav > .tasks-menu > .dropdown-menu {
 	width: 280px;
 	padding: 0 0 0 0!important;
