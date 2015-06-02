@@ -47,7 +47,7 @@ class BrainAsset extends AssetBundle
 		'js/plugins/interface/collapsible.min.js',
     ];
     public $depends = [
-        'yii\web\JqueryAsset',
+        //'yii\web\JqueryAsset',
         'yii\jui\JuiAsset',
         //'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
