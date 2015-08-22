@@ -38,7 +38,7 @@ use yii\widgets\ActiveForm;
                         'attribute' => 'Date',
                         'format'=>'raw',
                         'value'=>function ($model, $key, $index, $widget) {
-                            return $model->author->name . '<br />' .
+                            return (isset($model->author) ? $model->author->name : "UNKNOWN") . '<br />' .
                             Yii::$app->formatter->asDate($model->update_time, 'medium');
                         },
                     ],
