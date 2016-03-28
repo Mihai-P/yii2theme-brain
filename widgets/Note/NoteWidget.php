@@ -22,6 +22,11 @@ class NoteWidget extends Widget {
     public $model;
 
     /**
+     * @var Model the data model that this widget is associated with.
+     */
+    public $showAddNew = true;
+
+    /**
      * @var string the access priviledge to edit
      */
     public $accessPriviledge;
@@ -43,6 +48,7 @@ class NoteWidget extends Widget {
             'model' => $newModel,
             'dataProvider' => $notesDataProvider,
             'accessPriviledge' => $this->accessPriviledge,
+            'showAddNew' => $this->showAddNew,
         ]);
     }
 }

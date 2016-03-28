@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
     <div class="panel-heading">
         <h6 class="panel-title">Notes</h6>
         <?php
-        if(\Yii::$app->user->checkAccess('update::' . $accessPriviledge))
+        if($showAddNew && \Yii::$app->user->checkAccess('update::' . $accessPriviledge))
             echo Html::a('Add Note', '#edit-note' ,['class' => 'edit-note pull-right btn btn-xs btn-primary', 'data-toggle'=>"modal", 'role'=>"button"]);
         ?>
     </div>
